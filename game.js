@@ -9,7 +9,7 @@ let food = {
     x: Math.floor(Math.random() * (canvasSize / box)) * box,
     y: Math.floor(Math.random() * (canvasSize / box)) * box
 };
-let direction = null;
+let direction = 'RIGHT';
 let game;
 
 document.addEventListener('keydown', event => {
