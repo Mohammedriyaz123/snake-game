@@ -43,7 +43,8 @@ function draw() {
     // Collision with wall or self
     if (
         head.x < 0 || head.x >= canvasSize || head.y < 0 || head.y >= canvasSize ||
-        snake.some(segment => segment.x === head.x && segment.y === head.y)
+        (snake.length > 1 && snake.slice(1).some(segment => segment.x === head.x && segment.y === head.y))
+
     ) {
         clearInterval(game);
         alert('Game Over');
